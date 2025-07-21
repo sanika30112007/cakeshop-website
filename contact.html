@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Golden Cake Shop</title>
+  <link rel="stylesheet" href="style1.css"/>
+  <script>
+    function sendToWhatsApp() {
+      var name = document.getElementById("name").value;
+      var email=document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      var phoneNumber = "9422048325";
+      var url = "https://wa.me/9422048325?text=" + encodeURIComponent("hi"+"."+name+"\n"+email+"\n"+message);
+      window.open(url, '_Self');
+    }
+  </script>
+</head>
+<body>
+
+
+  <section class="contact-section">
+    <h1 class="menu-title"><center>Get in Touch</center></h1>
+
+    <div class="contact-container">
+
+      <div class="contact-form">
+        <form action="#" method="post"  onsubmit="sendToWhatsApp(); return false;">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h3>Golden Cake Shop</h3>
+        <p>📍 123 Sweet Street, Cake City, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📧 goldencakeshop@example.com</p>
+        <p>🕒 Open: 9:00 AM – 9:00 PM</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
